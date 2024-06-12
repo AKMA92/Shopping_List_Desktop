@@ -8,17 +8,16 @@ public class RequestHandler {
 		return list;
 	}
 
-	public void update(){
+	public void update(String[] a){
 		System.out.println("Ändern");
 	}
 	
-	public void add(){
+	public void add(String[] a){
 		System.out.println("Hinzufügen");
 	}
 	
 	public void delete(){
 		System.out.println("Löschen");
-}
-	
+	}
 	
 }
