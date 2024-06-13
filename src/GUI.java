@@ -110,7 +110,7 @@ public class GUI {
 		JButton update = new JButton("Ändern");
 		update.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				requestHandler.update();
+				//requestHandler.update();
 			}
 		});
 		update.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -118,9 +118,14 @@ public class GUI {
 		frame.getContentPane().add(update);
 		
 		JButton add = new JButton("Hinzufügen");
+		//wenn butten gedruckt wird, dann wird actionlistner getrigert( ausgelöst) 
 		add.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				requestHandler.add();
+				// hier wird array inizialisiert und mit jtextfelder gefüllt.
+				String[] a = { textName.getText(), textAmount.getText(), textPreis.getText(), textCategory.getText(), textNote.getText()} ;
+				// auf den requesthandler objekt wird die addfunktion aufgerufen. 
+				// @Param String[]
+				requestHandler.add(a);
 			}
 		});
 		add.setFont(new Font("Tahoma", Font.PLAIN, 20));

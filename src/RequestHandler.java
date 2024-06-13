@@ -13,7 +13,7 @@ public class RequestHandler {
 	}
 	
 	public void add(String[] a){
-		System.out.println("Hinzufügen");
+
 	}
 	
 	public void delete(){
