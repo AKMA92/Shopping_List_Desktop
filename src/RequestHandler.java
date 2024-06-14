@@ -9,11 +9,15 @@ public class RequestHandler {
 	}
 
 	public void update(String[] a){
-		System.out.println("Ändern");
+		for(int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);	
+		}
 	}
 	
 	public void add(String[] a){
-
+		for(int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
 	}
 	
 	public void delete(){

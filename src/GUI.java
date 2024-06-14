@@ -110,7 +110,8 @@ public class GUI {
 		JButton update = new JButton("Ändern");
 		update.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//requestHandler.update();
+				String[] a = { textName.getText(), textAmount.getText(), textPreis.getText(), textCategory.getText(), textNote.getText()} ;
+				requestHandler.update(a);
 			}
 		});
 		update.setFont(new Font("Tahoma", Font.PLAIN, 20));
