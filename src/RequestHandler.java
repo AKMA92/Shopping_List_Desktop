@@ -1,27 +1,25 @@
 import java.util.ArrayList;
 
 public class RequestHandler {
+    private Database database;
 
-	public ArrayList<String> getCurrentdata(){
-		System.out.println("Aktualisieren");
-		ArrayList<String> list = new ArrayList<>();	
-		return list;
-	}
+    public RequestHandler() {
+        this.database = new Database();
+    }
 
-	public void update(String[] a){
-		for(int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);	
-		}
-	}
-	
-	public void add(String[] a){
-		for(int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
-		}
-	}
-	
-	public void delete(){
-		System.out.println("Löschen");
-	}
-	
+    public ArrayList<String[]> getCurrentData() {
+        return database.getAllRecords();
+    }
+
+    public void add(String[] record) {
+        database.addRecord(record);
+    }
+
+    public void update(int index, String[] record) {
+        database.updateRecord(index, record);
+    }
+
+    public void delete(int index) {
+        database.deleteRecord(index);
+    }
 }
